@@ -164,7 +164,7 @@ function MvApp() {
   return (
     <div>
       <div id="ml">
-    <a href="http://localhost:3000/login"><h4>Back to login</h4></a>
+    <Link to="/login"><h4>Back to login</h4></Link>
     <h1 className="title">Now Showing</h1>
 
     <h3 className="sub-title">Top Trending</h3>
