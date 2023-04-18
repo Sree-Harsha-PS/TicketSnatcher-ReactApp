@@ -33,13 +33,14 @@ const Login = ({ setLoginUser}) => {
     }
 
     return (
+    
         <div className="login">
             <div>
                 <p id="title" style={{color:"black" , fontSize:"40px",fontFamily:"Impact"}}>ticketsnatcher</p>
                 <p style={{color:"black",fontSize:"15px",fontFamily:"cursive",fontStyle:"italic"}}>snatch your tickets now</p>
     {/* <h1 id="title">ticketsnatcher</h1>  
     <br></br> */}
-    </div>
+            </div>
     
             <h1>Login</h1>
             <input type="email" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>

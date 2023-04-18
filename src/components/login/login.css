@@ -6,8 +6,12 @@
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     border-radius: 8px;
     padding: 0.2rem;
-    align-items: center;
+    display: block;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+    margin-left:550px;
 }
 
 .login > input {
