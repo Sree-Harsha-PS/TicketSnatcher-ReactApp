@@ -11,7 +11,7 @@ import i9 from "./DoctorG.png"
 import i10 from "./Monster.png"
 import i11 from "./Thankgod.png"
 import i12 from "./RRR.png"
-
+import { Link } from "react-router-dom";
 import './Movies-Styles.css';
 import Movie from './parts';
 
@@ -164,7 +164,7 @@ function MvApp() {
   return (
     <div>
       <div id="ml">
-    <Link to="/login"><h4>Back to login</h4></Link>
+
     <h1 className="title">Now Showing</h1>
 
     <h3 className="sub-title">Top Trending</h3>
