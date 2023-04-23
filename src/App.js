@@ -9,7 +9,7 @@ import background from './components/ticketsnatcher.png';
 
 function Appbar(){
   return(
-    <div style={{display:"block",justifyContent:'space-between',alignItems:"-moz-initial"}}>
+    <div style={{display:"block"}}>
       <nav class="navbar navbar-expand-lg navbar-light bg-danger" style={{height:"70px"}}>
         <Link to="/home" class="navbar-brand mx-3 mt-3"><p id="title" style={{color:"black" ,fontSize:"30px",fontFamily:"Impact"}}>ticketsnatcher</p></Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
