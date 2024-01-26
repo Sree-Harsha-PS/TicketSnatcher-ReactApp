@@ -1,75 +1,76 @@
-const cinemas = [
-  {
-    name: "Gopalan Cinemas",
-    imgURL:
-      "https://www.boxofficepro.com/wp-content/uploads/2019/03/Cinepolis-Forum-Shantiniketan-Bengaluru.jpg",
-    timings: [
-      "9:30 am",
-      "12:15 pm",
-      "2:30 pm",
-      "4:00 pm",
-      "7:20 pm",
-      "9:45 pm"
-    ],
-    format: ["2D", "3D", "IMAX 3D"]
-  },
-  {
-    name: "PVR Vega City",
-    imgURL:
-      "https://www.boxofficepro.com/wp-content/uploads/2019/03/Cinepolis-Forum-Shantiniketan-Bengaluru.jpg",
-    timings: [
-      "9:30 am",
-      "12:15 pm",
-      "2:30 pm",
-      "4:00 pm",
-      "7:20 pm",
-      "9:45 pm"
-    ],
-    format: ["2D", "3D", "IMAX 3D"]
-  },
+function Flex(props) {
+    return <img className="circle-img " src={props.imgURL} alt="Flex_img" />;
+}
 
-  {
-    name: "Cinépolis Nexus Shantiniketan",
-    imgURL:
-      "https://www.boxofficepro.com/wp-content/uploads/2019/03/Cinepolis-Forum-Shantiniketan-Bengaluru.jpg",
-      timings: [
-        "9:30 am",
-        "12:15 pm",
-        "2:30 pm",
-        "4:00 pm",
-        "7:20 pm",
-        "9:45 pm"
-      ],
-    format: ["2D", "3D", "IMAX 3D"]
-  },
-  {
-    name: "Inox JP Nagar",
-    imgURL:
-      "https://www.boxofficepro.com/wp-content/uploads/2019/03/Cinepolis-Forum-Shantiniketan-Bengaluru.jpg",
-      timings: [
-        "9:30 am",
-        "12:15 pm",
-        "2:30 pm",
-        "4:00 pm",
-        "7:20 pm",
-        "9:45 pm"
-      ],
-    format: ["2D", "3D","2D", "3D"]
-  },
-  {
-    name: "PVR Koramangala",
-    imgURL:
-      "https://www.boxofficepro.com/wp-content/uploads/2019/03/Cinepolis-Forum-Shantiniketan-Bengaluru.jpg",
-    timings: [
-      "9:30 am",
-      "12:15 pm",
-      "2:30 pm",
-      "4:00 pm",
-      "7:20 pm",
-      "9:45 pm"
-    ],
-    format: ["2D", "3D", "IMAX 3D"]
-  }
-];
+function Format(props) {
+    return <p className="info">{props.format}</p>;
+}
 
-export default cinemas;
+function Time(props) {
+    return <p className="info">{props.time}</p>;
+}
+
+function Btn(props) {
+    return (
+    <div>
+    <button className="btn" onClick={console.log("hello bacho")}>
+        <Time time={props.timings} />
+        <Format format={props.format} />
+    </button>
+    </div>
+    );
+}
+    
+    function Card(props){
+        let movie=props.movie;
+        return (
+            <div className="card">
+              <div className="top">
+                <p>{props.key}</p>
+                <Flex imgURL={props.imgURL} />
+                <h2 className="name" >{props.name}</h2>
+              </div>
+              <div className="bottom">
+                <div>
+                  <Btn timings={props.t1} format={props.f1} />
+                </div>
+                <div>
+                  <Btn timings={props.t2} format={props.f2} />
+                </div>
+                <div>
+                  <Btn timings={props.t3} format={props.f3} />
+                </div>
+                <div>
+                  <Btn timings={props.t4} format={props.f1} />
+                </div>
+                <div>
+                  <Btn timings={props.t5} format={props.f3} />
+                </div>
+                <div>
+                  <Btn timings={props.t6} format={props.f2} />
+                </div>
+              </div>
+            </div>
+        );
+      }
+
+export default function createCard(cine) {
+    return (
+        <Card
+        key={cine.id}
+        name={cine.name}
+        imgURL={cine.imgURL}
+        t1={cine.timings[0]}
+        t2={cine.timings[1]}
+        t3={cine.timings[2]}
+        t4={cine.timings[3]}
+        t5={cine.timings[4]}
+        t6={cine.timings[5]}
+        f1={cine.format[0]}
+        f2={cine.format[1]}
+        f3={cine.format[2]}
+        f4={cine.format[3]}
+        movie="Kantara"
+        />
+    );
+    }

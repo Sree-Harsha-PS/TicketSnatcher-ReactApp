@@ -119,7 +119,7 @@ padding: 0 auto;
   border-radius: 3px;
   box-shadow: black 10px 10px;
   background-color: #FDF0E0;
-  transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;  
   color: #FAD6A5;
 }
 
@@ -162,21 +162,22 @@ dd dl .mv-card  {
 
   
 .heading {
+  /* position: absolute; */
+  padding-top: 2%;
+  top: 20px;
+  left: 50px; 
   color:white;
-  margin-top:10px;
-  /* margin-bottom:30px;
-  margin-left: 600px; */
   text-shadow: #282c34 5px 3px;
   font-style: italic;
-  font-size: 3rem;
+  font-size: 3rem;  
 }
 
 .card {
   font-size:18px;
   margin-left:100px;
-  margin-bottom:10px;
+  margin-bottom:30px;
   border-radius: 25px;
-  width: 70%;
+  width: 142%;
   position: relative;
   padding: 25px 15px 50px;
   background-color: #fad6a5;
@@ -221,7 +222,7 @@ dd dl .mv-card  {
   margin-top: 40px;
   padding-left: 70px;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   padding: 5px 0px 5px 120px;
 }
 
@@ -276,8 +277,61 @@ dd dl .mv-card  {
   text-decoration: none;
 }
 
-.shows{
-  width: 30%;
+.showbody{
+  background-color: #ed7f4c;
+  text-align: center;
+}
+
+.venue{
+  grid-column: 2/3;
+  margin-left: 15%;
+  width: 40%;
   padding: 10%;
-  display: flex;
+  font-family: sans-serif;
+}
+
+.shows{
+  display: grid;
+  column-count: 3;
+  grid-template-columns: 3;
+  grid-template-rows: 0px;
+}
+
+.showposter{
+  grid-column: 1/3;
+  margin-top: 100px;
+  margin-left: 60px;
+  width: 25%;
+}
+
+.marq{
+  font-size: large;
+  font-weight: 600;
+  font-style: italic;
+  background-color: white;
+}
+
+.showanime{
+  background: linear-gradient(
+        to right,
+        #7953cd 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
 }

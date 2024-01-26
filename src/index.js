@@ -1,175 +1,49 @@
 // import React, { useContext, createContext, useState } from "react";
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  Navigate,
-  useNavigate,
-  useLocation
-} from "react-router-dom";
+  createBrowserRouter,
+  RouterProvider,
+  useParams,
+}from 'react-router-dom';
+// import {
+//   Routes,
+//   BrowserRouter,
+//   Route
+// } from 'react-router-dom';
 import MvApp from './components/homepage/Movies-App';
+import Shows from './components/homepage/shows'
 import './index.css';
 
 
-function App(){
-  return(
-    <Router>
-      <Routes>
-        <Route path="/" element={<MvApp></MvApp>}></Route>
-      </Routes>
-    </Router>
-  );
-}
+const router = createBrowserRouter([
+  {
+      path:"/",
+      element:<MvApp/>,  
+  },
+  {
+      path:"/shows/:show",
+      element:<Shows/>
+  },
+])
 
-// function AuthExample() {
-//   return (
-//     <ProvideAuth>
-//     <Router>
-//       <div>
-//         <AuthButton />
-
-//         <ul>
-//           <li>
-//             <Link to="/public">Public Page</Link>
-//           </li>
-//           <li>
-//             <Link to="/protected">Protected Page</Link>
-//           </li>
-//         </ul>
-
-//         <Routes>
-//           <Route path="/" element={<MvApp />} />
-//           <Route path="/public" element={<PublicPage />} />
-//           <PrivateRoute path="/protected" element={<ProtectedPage />} />
-//           <Route path="/login" element={<LoginPage />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   </ProvideAuth>
+// function App(){
+//   return(
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<MvApp/>}></Route>
+//         <Route path="/shows/:show" element={<Shows/>}></Route>
+//       </Routes>
+//     </BrowserRouter>
 //   );
 // }
 
-// const fakeAuth = {
-//   isAuthenticated: false,
-//   signin(cb) {
-//     fakeAuth.isAuthenticated = true;
-//     setTimeout(cb, 100); // fake async
-//   },
-//   signout(cb) {
-//     fakeAuth.isAuthenticated = false;
-//     setTimeout(cb, 100);
-//   }
-// };
-
-// const authContext = createContext();
-
-// function ProvideAuth({ children }) {
-//   const auth = useProvideAuth();
-//   return (
-//     <authContext.Provider value={auth}>
-//       {children}
-//     </authContext.Provider>
-//   );
-// }
-
-// function useAuth() {
-//   return useContext(authContext);
-// }
-
-// function useProvideAuth() {
-//   const [user, setUser] = useState(null);
-
-//   const signin = cb => {
-//     return fakeAuth.signin(() => {
-//       setUser("user");
-//       cb();
-//     });
-//   };
-
-//   const signout = cb => {
-//     return fakeAuth.signout(() => {
-//       setUser(null);
-//       cb();
-//     });
-//   };
-
-//   return {
-//     user,
-//     signin,
-//     signout
-//   };
-// }
-
-// function AuthButton() {
-//   let history = useNavigate();
-//   let auth = useAuth();
-
-//   return auth.user ? (
-//     <p>
-//       Welcome!{" "}
-//       <button
-//         onClick={() => {
-//           auth.signout(() => history.push("/"));
-//         }}
-//       >
-//         Sign out
-//       </button>
-//     </p>
-//   ) : (
-//     <p>You are not logged in.</p>
-//   );
-// }
-
-// function PrivateRoute({ children, ...rest }) {
-//   let auth = useAuth();
-//   return (
-//     <Route
-//       {...rest}
-//       render={({ location }) =>
-//         auth.user ? (
-//           children
-//         ) : (
-//           <Navigate
-//             to={{
-//               pathname: "/login",
-//               state: { from: location }
-//             }}
-//           />
-//         )
-//       }
-//     />
-//   );
-// }
-
-// function PublicPage() {
-//   return <MvApp></MvApp>;
-// }
-
-// function ProtectedPage() {
-//   return <h3>Protected</h3>;
-// }
-
-// function LoginPage() {
-//   let history = useNavigate();
-//   let location = useLocation();
-//   let auth = useAuth();
-
-//   let { from } = location.state || { from: { pathname: "/" } };
-//   let login = () => {
-//     auth.signin(() => {
-//       history.replace(from);
-//     });
-//   };
-
-//   return (
-//     <div>
-//       <p>You must log in to view the page at {from.pathname}</p>
-//       <button onClick={login}>Log in</button>
-//     </div>
-//   );
-// }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App></App>);
+root.render(
+  <RouterProvider router={router}></RouterProvider>
+);
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <App/>
+// );
