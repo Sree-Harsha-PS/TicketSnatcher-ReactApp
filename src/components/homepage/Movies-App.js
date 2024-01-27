@@ -11,7 +11,6 @@ import i9 from "./assets/DoctorG.png"
 import i10 from "./assets/Monster.png"
 import i11 from "./assets/Thankgod.png"
 import i12 from "./assets/RRR.png"
-import { Link } from "react-router-dom";
 import './Movies-Styles.css';
 import Movie from './parts';
 

@@ -83,6 +83,7 @@ padding: 0 auto;
     display: flex;
     justify-content: space-between;
     margin: 4rem auto;
+    margin-left: 100px;
     max-width: 90%;
     flex-direction: row;
     align-items: flex-start ;
@@ -308,16 +309,16 @@ dd dl .mv-card  {
   font-size: large;
   font-weight: 600;
   font-style: italic;
-  background-color: white;
 }
 
 .showanime{
+  font-size: 20px;
   background: linear-gradient(
-        to right,
-        #7953cd 20%,
-        #00affa 30%,
-        #0190cd 70%,
-        #764ada 80%
+        to right,	
+        #bfa75d 20%,  
+        #838181 30%,
+        #606060 70%,
+        #222222 80%
     );
     -webkit-background-clip: text;
     background-clip: text;

@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
-import cinemas from "./venue";
-import { useState } from "react";
+import {Link} from "react-router-dom";
 
 function Movie(props){
     return(
