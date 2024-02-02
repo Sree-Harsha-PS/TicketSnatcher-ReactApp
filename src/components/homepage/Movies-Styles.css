@@ -5,12 +5,16 @@
 
 #ml {
   font-family: sans-serif;
-  margin: 0 auto;
   padding: 35px;
   min-width: 400px;
   background-color:tomato;
 }
 
+.center{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -163,7 +167,6 @@ dd dl .mv-card  {
 
   
 .heading {
-  /* position: absolute; */
   padding-top: 2%;
   top: 20px;
   left: 50px; 
@@ -174,21 +177,20 @@ dd dl .mv-card  {
 }
 
 .card {
+  border: 2px solid black;
+  border-radius: 20px 20px 0 0;
   font-size:18px;
   margin-left:100px;
   margin-bottom:30px;
   border-radius: 25px;
-  width: 142%;
-  position: relative;
-  padding: 25px 15px 50px;
-  background-color: #fad6a5;
-  height:40px;
+  width: 300%;
+  padding: 25px 15px 10px;
+  background-color: orange;
   box-shadow: 0 2px 5px #ccc;
   text-align: left;
 }
 
 .top {
-  border-radius: 20px 20px 0 0;
   height: 40px;
   width: 100%;
   background-color:orange;
@@ -223,7 +225,7 @@ dd dl .mv-card  {
   margin-top: 40px;
   padding-left: 70px;
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   padding: 5px 0px 5px 120px;
 }
 
@@ -251,21 +253,21 @@ dd dl .mv-card  {
   -moz-border-radius: 1;
   border-radius: 8px;
   font-family: Arial;
-  /* position: relative; */
+  position: relative;
   /* margin-bottom: 12px; */
   color: #db1b1b;
   font-size: 10px;
-  padding: 1px 10px 0;
+  padding: 1px 5px 0 0;
   /* margin-bottom: 24px; */
   border: solid #ed7f4c 1px;
   text-decoration: none;
   font-weight: 400;
   position: relative;
   bottom: 20px;
-  /* display: flex; */
-  /* justify-content: center; */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  /* flex-direction: column; */
+  flex-direction: column;
 }
 
 .btn:hover {

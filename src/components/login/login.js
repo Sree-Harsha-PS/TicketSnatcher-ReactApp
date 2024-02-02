@@ -1,50 +1,32 @@
-import React, {useState} from "react"
+import React, {createContext, useEffect, useState} from "react"
 import "./login.css"
 import axios from "axios"
 import TM from "./TM.png"
-import {  useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
-const Login = ({ setLoginUser}) => {
+const loginContext = createContext(0);
 
-    const Navigate = useNavigate()
+const Login = () => {
+    
+    const Navigate = useNavigate();
 
-    const [ user, setUser] = useState({
-        email:"",
-        password:""
-    })
+    const [LoginUser,setLoginUser] = useState("");
 
-    const handleChange = e => {
-        const { name, value } = e.target
-        setUser({
-            ...user,
-            [name]: value
-        })
-    }
-
-    const login = () => {
-        axios.post("http://localhost:3001/login", user)
-        .then(res => {
-            if(res.data == 'login'){
-                Navigate("/home")
-            }else{
-                alert('login failed !!')
-            }
-        })
+    const login = () =>{
+        Navigate('/auth/payment');
     }
 
     return (
-    
         <div className="login">
             <div>
                 <p id="title" style={{color:"black" , fontSize:"40px",fontFamily:"Impact"}}>ticketsnatcher</p>
                 <p style={{color:"black",fontSize:"15px",fontFamily:"cursive",fontStyle:"italic"}}>snatch your tickets now</p>
-    {/* <h1 id="title">ticketsnatcher</h1>  
-    <br></br> */}
             </div>
     
             <h1>Login</h1>
-            <input type="email" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
-            <input type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
+            <input type="email" name="email" id="email" value={LoginUser} onChange={(e) => {setLoginUser(e.target.value)}} placeholder="Enter your Username"></input>
+            <input type="password" name="password" id="pass" placeholder="Enter your Password" ></input>
             <div className="button" onClick={login}>Login</div>
             <div>or</div>
             <div className="button" onClick={() => Navigate("/register")}>Register</div>
@@ -52,4 +34,4 @@ const Login = ({ setLoginUser}) => {
     )
 }
 
-export default Login
+export {Login};

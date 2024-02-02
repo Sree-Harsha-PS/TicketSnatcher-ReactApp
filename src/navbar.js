@@ -10,15 +10,9 @@ export default function Navbar(){
             </Link>
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-3">
-                {/* <li className="nav-item">
-                <Link to="/home" className="nav-link" id="home">Home</Link>
-                </li> */}
                 <li className="nav-item">
                 <Link to="/login" className="nav-link" id="login">Login</Link>
                 </li>
-                {/* <li className="nav-item">
-                <Link to="/register" className="nav-link" id="regis">Register</Link>
-                </li> */}
             </ul>
             </div>
         </nav>

@@ -9,7 +9,7 @@ export default function Shows(){
     return (
     <div className="showbody">
         <center><h1 className="heading" >Shows for {show}</h1></center>
-        <marquee className="marq"><p className="showanime">Now Showing</p></marquee>
+        <div className="marq"><p className="showanime">Now Showing</p></div>
         <div className="shows">
             <img src={dumyy} className="showposter"></img>
             <div className="venue"> 

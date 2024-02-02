@@ -154,18 +154,18 @@ function MvApp() {
   return (
     <div id="ml">
       <h1 className="title">Now Showing</h1>
-      <h3 className="sub-title">Top Trending</h3>
-      <table>
-        <div className="lister">{movies1.map(makeMovie)}</div>
-      </table>
-      <h3 className="sub-title">Recent Releases</h3>
-      <table>
-        <div className="lister">{movies2.map(makeMovie)}</div>
-      </table>
-      <h3 className="sub-title">Recommended For You</h3>
-      <table>
-        <div className="lister">{movies3.map(makeMovie)}</div>
-      </table>
+        <h3 className="sub-title">Top Trending</h3>
+        <table>
+          <div className="lister">{movies1.map(makeMovie)}</div>
+        </table>
+        <h3 className="sub-title">Recent Releases</h3>
+        <table>
+          <div className="lister">{movies2.map(makeMovie)}</div>
+        </table>
+        <h3 className="sub-title">Recommended For You</h3>
+        <table>
+          <div className="lister">{movies3.map(makeMovie)}</div>
+        </table>
     </div>
   );
 }
