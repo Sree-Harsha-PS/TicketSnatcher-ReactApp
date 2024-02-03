@@ -22,14 +22,15 @@ const Verify=()=>{
     const verify={
       email:email
     }
-    axios.post("http://127.0.0.1:3001/info",verify).then(resp=>{
-      console.log(resp.data.length)
-      if(resp.data.length===1){
-        wusb(1);
-      }else{
-        wusb(0);
-      }
-    })
+    wusb(1);
+    // axios.post("http://127.0.0.1:3001/info",verify).then(resp=>{
+    //   console.log(resp.data.length)
+    //   if(resp.data.length===1){
+    //     wusb(1);
+    //   }else{
+    //     wusb(0);
+    //   }
+    // })
   }
 
 class Wallet extends React.Component{
