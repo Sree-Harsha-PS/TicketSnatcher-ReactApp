@@ -1,4 +1,5 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
+
 
 function Flex(props) {
     return <img className="circle-img " src={props.imgURL} alt="Flex_img" />;
@@ -19,10 +20,10 @@ const toPay = () =>{
 function Btn(props) {
     return (
     <div>
-    <button className="btn" onClick={toPay}>
+    <Link className="btn" to="/auth/payment">
         <Time time={props.timings} />
         <Format format={props.format} />
-    </button>
+    </Link>
     </div>
     );
 }

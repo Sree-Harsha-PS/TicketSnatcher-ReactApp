@@ -4,6 +4,7 @@ import {Login,loginContext} from './components/login/login';
 import Register from './components/register/register';
 import { useState, useEffect } from 'react';
 import Navbar from './navbar';
+import Logo from './components/payment/Nishan';
 import {
   Routes,
   Outlet,
@@ -31,7 +32,7 @@ export default function App(){
         {/* <Route element={<Private/>}>
           <Route path='/auth/payment' element={}></Route>
         </Route> */}
-        <Route path='/auth/payment' element={}></Route>
+        <Route path='/auth/payment' element={<Logo/>}></Route>
         <Route path="/shows/:show" element={<Shows/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
