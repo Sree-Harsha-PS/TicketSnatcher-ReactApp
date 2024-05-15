@@ -78,6 +78,6 @@ Welcome to the Movie Ticket Booking App, a web application built using the MERN 
 
 ## Contact
 
-For any queries or issues, please contact us at hollanishan@gmail.com.
+For any queries or issues, please contact us at sreeharshapolepalli@gmail.com.
 
 Feel free to explore and enjoy the Movie Ticket Booking App!
